@@ -1,3 +1,6 @@
+<!-- Shanmukh: this is a AI Generated pom.xml, original is in your Ansible Deployment folder.-->
+
+
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -18,14 +21,16 @@
     <name>KhataBackend</name>
     <description>Simple user authentication backend</description>
 
+    <!-- ✅ Java 17 + compiler release pinned -->
     <properties>
-             <maven.compiler.release>17</maven.compiler.release>
-             <java.version>17</java.version>
-             <lombok.version>1.18.26</lombok.version>
+        <java.version>17</java.version>
+        <maven.compiler.release>17</maven.compiler.release>
+        <lombok.version>1.18.26</lombok.version>
     </properties>
 
     <dependencies>
-        <!-- Spring Boot starters -->
+
+        <!-- Spring Boot -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -36,12 +41,12 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-         <dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
 
-        <!-- MySQL connector -->
+        <!-- MySQL -->
         <dependency>
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
@@ -49,7 +54,7 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- Lombok for boilerplate code -->
+        <!-- Lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -57,40 +62,41 @@
             <optional>true</optional>
         </dependency>
 
-        <!-- Twilio SDK -->
+        <!-- Twilio -->
         <dependency>
             <groupId>com.twilio.sdk</groupId>
             <artifactId>twilio</artifactId>
             <version>8.31.1</version>
         </dependency>
 
-        <!-- Redis Spring Data -->
+        <!-- Redis -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
 
-        <!-- Spring Boot test -->
+        <!-- Tests -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
 
-         <build>
-             <plugins>
-                 <plugin>
-                     <groupId>org.apache.maven.plugins</groupId>
-                     <artifactId>maven-compiler-plugin</artifactId>
-                     <version>3.8.1</version>
-                     <configuration>
-                         <source>17</source>
-                         <target>17</target>
-                     </configuration>
-                 </plugin>
-             </plugins>
-         </build>
-
+    <!-- ✅ Correct Maven compiler plugin for Java 17 + Spring 2.7.x -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>17</source>
+                    <target>17</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
