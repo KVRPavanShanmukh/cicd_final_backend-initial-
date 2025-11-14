@@ -86,7 +86,6 @@
                <configuration>
                  <source>17</source>
                  <target>17</target>
-                 <release>17</release>
                  <!-- Optional: force use of Eclipse compiler if you want -->
                  <!-- <compilerId>javac</compilerId> -->
                </configuration>
